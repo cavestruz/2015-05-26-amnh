@@ -11,6 +11,7 @@ enddate: 2015-05-29
 latlng: 40.781324,-73.973988
 registration: restricted
 instructor: ["Camille Avestruz"]
+helper: ["Nicholas Hannah"]
 contact: admin@software-carpentry.org
 ipythonnotebook: http://nbviewer.ipython.org/urls
 raw: raw.github.com/swcarpentry/bc/gh-pages
@@ -45,6 +46,13 @@ raw: raw.github.com/swcarpentry/bc/gh-pages
 {% if page.instructor %}
 <p>
   <strong>Instructors:</strong>
+  {{page.instructor | join: ', ' %}}
+</p>
+{% endif %}
+
+{% if page.helper %}
+<p>
+  <strong>Helpers:</strong>
   {{page.instructor | join: ', ' %}}
 </p>
 {% endif %}
